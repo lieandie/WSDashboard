@@ -6,10 +6,9 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faCog } from "@fortawesome/free-solid-svg-icons/faCog";
 import { faStar } from "@fortawesome/free-solid-svg-icons/faStar";
 import { faCubes } from "@fortawesome/free-solid-svg-icons/faCubes";
+import {faDoorOpen} from "@fortawesome/free-solid-svg-icons/faDoorOpen";
 
-library.add(faCog);
-library.add(faStar);
-library.add(faCubes);
+library.add(faCog, faStar, faCubes, faDoorOpen);
 
 Vue.component("fai", FontAwesomeIcon);
 

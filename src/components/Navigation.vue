@@ -53,16 +53,20 @@ span {
   font-size: 12px;
 }
 
-a,
-.router-link-active,
-.router-link-exact-active {
-  color: #c8102e;
+a {
+  color: inherit;
   cursor: pointer;
   text-decoration: none;
 }
 
+.router-link-exact-active {
+  background: linear-gradient(to top, rgba(200, 16, 46, 0.1) 0%, white 85%);
+}
+
 .nav__button {
   width: 100%;
+  -webkit-transition: background-color 0.2s ease; /* Safari */
+  transition: background-color 0.2s ease;
 }
 
 .nav__button:hover {

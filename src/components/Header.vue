@@ -21,6 +21,12 @@
           ></path>
         </g>
       </svg>
+      <div class="header__user">
+        <div class="header__user-username">Drakula Drakula Drakula</div>
+        <div class="header__user-exit">
+          <fai icon="door-open" size="sm" />
+        </div>
+      </div>
     </header>
     <Navigation />
   </div>
@@ -36,7 +42,33 @@ export default {
 </script>
 
 <style scoped>
-    header {
-        margin-bottom: 8px;
-    }
+header {
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.container > * {
+  color: #c8102e;
+}
+
+.header__user {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  padding: 4px;
+  border-radius: 12px;
+}
+
+.header__user-username {
+  margin-right: 8px;
+  font-size: 14px;
+}
+.header__user-exit {
+  cursor: pointer;
+}
 </style>
