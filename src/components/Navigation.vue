@@ -39,10 +39,9 @@ export default {
 .container__link {
   display: flex;
   width: 100%;
-  background-color: #C8102E;
   align-content: center;
   justify-content: center;
-  padding-bottom: 14px;
+  padding-bottom: 8px;
 }
 
 .container__link * {
@@ -57,12 +56,24 @@ span {
 a,
 .router-link-active,
 .router-link-exact-active {
-  color: #C8102E;
+  color: #c8102e;
   cursor: pointer;
   text-decoration: none;
 }
 
 .nav__button {
   width: 100%;
+}
+
+.nav__button:hover {
+  background: linear-gradient(to top, #c8102e 0%, rgba(200, 16, 46, 0.15) 15%, white 75%);
+}
+
+.container .nav__button:first-child {
+  border-bottom-left-radius: 12px;
+}
+
+.container .nav__button:last-child {
+  border-bottom-right-radius: 12px;
 }
 </style>

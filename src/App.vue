@@ -9,12 +9,11 @@
 
 <style>
 .app {
-  font-family: StemWebMedium,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-family: StemWebMedium, Helvetica Neue, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #000000;
-  padding-left: 8%;
-  padding-right: 8%;
+  padding: 2% 8%;
 }
 
 .app__router {
