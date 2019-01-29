@@ -31,6 +31,7 @@
 .app__sidenav {
   position: fixed;
   display: flex;
+  align-items: center;
   left: 0;
   top: 0;
   height: 100%;
