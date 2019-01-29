@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="service">
     {{ title }}
   </div>
 </template>
@@ -14,7 +14,9 @@ export default {
 </script>
 
 <style scoped>
-.container {
+.service {
   text-align: center;
+  border: 2px solid #c8102e;
+  padding: 4px;
 }
 </style>

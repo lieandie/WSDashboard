@@ -1,5 +1,5 @@
 <template>
-  <nav class="container">
+  <nav class="projects">
     <router-link to="/services" class="nav__button">
       <div class="container__link">
         <fai icon="cubes" size="1x" />
@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style scoped>
-.container {
+.projects {
   display: flex;
   justify-content: space-evenly;
   box-shadow: 0 14px 14px rgba(0, 0, 0, 0.1);
@@ -60,24 +60,28 @@ a {
 }
 
 .router-link-exact-active {
-  background: linear-gradient(to top, rgba(200, 16, 46, 0.1) 0%, white 85%);
+  /*background: linear-gradient(to top, rgba(200, 16, 46, 0.1) 0%, white 85%);*/
 }
 
 .nav__button {
   width: 100%;
   -webkit-transition: background-color 0.2s ease; /* Safari */
   transition: background-color 0.2s ease;
+  border-bottom: 2px solid;
+  border-color: white;
+
 }
 
 .nav__button:hover {
-  background: linear-gradient(to top, #c8102e 0%, rgba(200, 16, 46, 0.15) 15%, white 75%);
+  border-bottom: 2px solid;
+  border-color: #c8102e;
 }
 
-.container .nav__button:first-child {
+.projects .nav__button:first-child {
   border-bottom-left-radius: 12px;
 }
 
-.container .nav__button:last-child {
+.projects .nav__button:last-child {
   border-bottom-right-radius: 12px;
 }
 </style>

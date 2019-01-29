@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="projects">
     <header>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +50,7 @@ header {
   flex-direction: row;
 }
 
-.container > * {
+.projects > * {
   color: #c8102e;
 }
 
@@ -59,9 +59,10 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: red;
-  padding: 4px;
-  border-radius: 12px;
+  background-color: #e61c41;
+  color: white;
+  padding: 2px 6px;
+  border-top-right-radius: 12px;
 }
 
 .header__user-username {
