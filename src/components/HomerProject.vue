@@ -16,6 +16,5 @@ export default {
 <style scoped>
 .container {
   text-align: center;
-    padding-top: 18px;
 }
 </style>

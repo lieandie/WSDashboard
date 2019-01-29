@@ -1,20 +1,15 @@
 <template>
   <div class="app">
     <Header />
-    <div class="app__sidenav">
-      <SideNav />
-    </div>
-    <div class="app__router">
-      <main>
-        <router-view />
-      </main>
-    </div>
+    <main>
+      <router-view />
+    </main>
   </div>
 </template>
 
 <style>
 .app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: StemWebMedium,Helvetica Neue,Helvetica,Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #000000;
@@ -40,12 +35,16 @@
 body {
   margin: 0;
 }
+
+main {
+  margin-top: 18px;
+}
 </style>
+
 <script>
 import Header from "./components/Header";
-import SideNav from "./components/SideNav";
 
 export default {
-  components: { SideNav, Header }
+  components: { Header }
 };
 </script>
