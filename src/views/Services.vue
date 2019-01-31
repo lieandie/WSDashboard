@@ -11,7 +11,7 @@
         <HomerProject title="WebService" />
       </div>
     </div>
-    <div class="projects">
+    <div class="navigation">
       <div class="projects__title">
         Проекты
       </div>
@@ -39,7 +39,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .container {
   display: flex;
   flex-direction: row;
@@ -58,7 +58,7 @@ export default {
   background-color: blue;
 }
 
-.projects {
+.navigation {
   width: 100%;
   display: flex;
   flex-direction: row;

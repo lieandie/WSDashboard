@@ -16,21 +16,6 @@
   padding: 2% 8%;
 }
 
-.app__router {
-  background-color: aqua;
-  width: 100%;
-  display: flex;
-}
-
-.app__sidenav {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  left: 0;
-  top: 0;
-  height: 100%;
-}
-
 body {
   margin: 0;
 }
