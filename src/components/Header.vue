@@ -6,7 +6,6 @@
                     width="249"
                     height="18"
                     viewBox="0 0 249 18"
-                    alt="Логотип Хоум Кредит Банк"
                     class="header__logo"
             >
                 <g fill-rule="evenodd">
@@ -51,7 +50,7 @@
     }
 
     .header__logo{
-        fill: $primary-text-color;
+        fill: $accent-color;
     }
 
     .header__user {
