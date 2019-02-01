@@ -22,5 +22,6 @@
         border: 1.5px solid $accent-color;
         padding: 4px;
         border-radius: $primary-border-radius;
+        cursor: pointer;
     }
 </style>
