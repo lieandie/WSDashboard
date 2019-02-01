@@ -23,7 +23,7 @@
 
     body {
         margin: 0;
-        background-color: #616161;
+        background-color: $bg-color;
         display: flex;
         justify-content: center;
     }
