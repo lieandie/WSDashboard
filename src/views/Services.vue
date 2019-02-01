@@ -1,41 +1,39 @@
 <template>
     <div class="services">
-        <objects-card grow="2" title="Среды">
-            <div class="environments__content">
-                <h-object title="WebService"/>
-                <h-object title="WebService"/>
-                <h-object title="WebService"/>
-                <h-object title="WebService"/>
-            </div>
-        </objects-card>
-        <objects-card grow="2" title="Проекты">
-            <div class="projects__content">
-                <h-object title="WebService"/>
-                <h-object title="PrintServer"/>
-                <h-object title="CreditBroker"/>
-                <h-object title="WebClient"/>
-                <h-object title="CIF"/>
-                <h-object title="Reporting-service"/>
-                <h-object title="WPS"/>
-            </div>
-        </objects-card>
-        <objects-card grow="2" title="Сервисы">
-            <div class="ws__content">
-                <h-object title="WebService"/>
-                <h-object title="PrintServer"/>
-                <h-object title="CreditBroker"/>
-                <h-object title="WebClient"/>
-                <h-object title="CIF"/>
-                <h-object title="Reporting-service"/>
-                <h-object title="WPS"/>
-                <h-object title="WPS"/>
-                <h-object title="WPS"/>
-                <h-object title="WPS"/>
-                <h-object title="WPS"/>
-                <h-object title="WPS"/>
-                <h-object title="WPS"/>
-            </div>
-        </objects-card>
+        <div class="row">
+            <objects-card title="Среды">
+                <div class="card-content">
+                    <h-object title="WebService"/>
+                    <h-object title="WebService"/>
+                    <h-object title="WebService"/>
+                    <h-object title="WebService"/>
+                </div>
+            </objects-card>
+            <objects-card title="Проекты">
+                <div class="card-content">
+                    <h-object title="WebService"/>
+                    <h-object title="PrintServer"/>
+                    <h-object title="CreditBroker"/>
+                    <h-object title="WebClient"/>
+                    <h-object title="CIF"/>
+                    <h-object title="Reporting-service"/>
+                    <h-object title="WPS"/>
+                </div>
+            </objects-card>
+        </div>
+        <div class="row">
+            <objects-card title="Сервисы">
+                <div class="card-content">
+                    <h-object title="WebService"/>
+                    <h-object title="PrintServer"/>
+                    <h-object title="CreditBroker"/>
+                    <h-object title="WebClient"/>
+                    <h-object title="CIF"/>
+                    <h-object title="Reporting-service"/>
+                    <h-object title="WPS"/>
+                </div>
+            </objects-card>
+        </div>
     </div>
 </template>
 
@@ -54,13 +52,35 @@
 <style lang="scss" scoped>
     .services {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         width: 100%;
     }
 
-    .environments__content > div,
-    .projects__content > div,
-    .ws__content > div {
-        margin: 6px;
+    .row:last-child {
+        margin-top: 4px;
+    }
+
+    .row .div:first-child {
+        flex-grow: 1;
+    }
+
+    .row .div:last-child {
+        flex-grow: 1;
+    }
+
+    .row > div {
+        flex-grow: 1;
+    }
+
+    .card-content {
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 4px;
+    }
+
+    .card-content > div {
+        margin: 2px;
     }
 </style>

@@ -15,10 +15,12 @@
 
 <style lang="scss" scoped>
     @import "../styles/variables/color.scss";
+    @import "../styles/variables/border.scss";
 
     .service {
         text-align: center;
-        border: 2px solid $primary-color;
+        border: 1.5px solid $accent-color;
         padding: 4px;
+        border-radius: $primary-border-radius;
     }
 </style>

@@ -16,12 +16,13 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         color: #000000;
-        padding: 2% 8%;
+        margin: 2% 8%;
     }
 
     body {
         margin: 0;
         background-color: $bg-color;
+        overflow: hidden;
     }
 
     main {
@@ -51,6 +52,10 @@
             border-bottom-right-radius: inherit;
             z-index: -1;
         }
+    }
+
+    .row {
+        display: flex;
     }
 </style>
 
