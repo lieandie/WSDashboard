@@ -1,76 +1,66 @@
 <template>
-  <div class="container">
-    <div class="environments">
-      <div class="environments__title">
-        Среды
-      </div>
-      <div class="environments__content">
-        <HomerProject title="WebService" />
-        <HomerProject title="WebService" />
-        <HomerProject title="WebService" />
-        <HomerProject title="WebService" />
-      </div>
+    <div class="services">
+        <objects-card grow="2" title="Среды">
+            <div class="environments__content">
+                <h-object title="WebService"/>
+                <h-object title="WebService"/>
+                <h-object title="WebService"/>
+                <h-object title="WebService"/>
+            </div>
+        </objects-card>
+        <objects-card grow="2" title="Проекты">
+            <div class="projects__content">
+                <h-object title="WebService"/>
+                <h-object title="PrintServer"/>
+                <h-object title="CreditBroker"/>
+                <h-object title="WebClient"/>
+                <h-object title="CIF"/>
+                <h-object title="Reporting-service"/>
+                <h-object title="WPS"/>
+            </div>
+        </objects-card>
+        <objects-card grow="2" title="Сервисы">
+            <div class="ws__content">
+                <h-object title="WebService"/>
+                <h-object title="PrintServer"/>
+                <h-object title="CreditBroker"/>
+                <h-object title="WebClient"/>
+                <h-object title="CIF"/>
+                <h-object title="Reporting-service"/>
+                <h-object title="WPS"/>
+                <h-object title="WPS"/>
+                <h-object title="WPS"/>
+                <h-object title="WPS"/>
+                <h-object title="WPS"/>
+                <h-object title="WPS"/>
+                <h-object title="WPS"/>
+            </div>
+        </objects-card>
     </div>
-    <div class="navigation">
-      <div class="projects__title">
-        Проекты
-      </div>
-      <div class="projects__content">
-        <HomerProject title="WebService" />
-        <HomerProject title="PrintServer" />
-        <HomerProject title="CreditBroker" />
-        <HomerProject title="WebClient" />
-        <HomerProject title="CIF" />
-        <HomerProject title="Reporting-service" />
-        <HomerProject title="WPS" />
-      </div>
-    </div>
-  </div>
 </template>
 
 <script>
-import HomerProject from "../components/HomerProject";
+    import HObject from "../components/HObject";
+    import ObjectsCard from "../components/ObjectsCard";
 
-export default {
-  name: "projects",
-  components: {
-    HomerProject
-  }
-};
+    export default {
+        name: "projects",
+        components: {
+            ObjectsCard, HObject
+        }
+    };
 </script>
 
 <style lang="scss" scoped>
-.container {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
+    .services {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
 
-.container > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.environments {
-  display: flex;
-  flex-direction: column;
-  background-color: blue;
-}
-
-.navigation {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  background-color: aqua;
-}
-
-.projects__content {
-}
-
-.environments__content > div,
-.projects__content > div {
-  margin: 6px;
-}
+    .environments__content > div,
+    .projects__content > div,
+    .ws__content > div {
+        margin: 6px;
+    }
 </style>

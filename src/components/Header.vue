@@ -51,7 +51,7 @@
     }
 
     .header__logo{
-        fill: $secondary-text-color;
+        fill: $primary-text-color;
     }
 
     .header__user {

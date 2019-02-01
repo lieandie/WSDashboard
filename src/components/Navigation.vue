@@ -88,7 +88,7 @@
             content: "";
             width: 100%;
             height: 100%;
-            transform: translateY(-90%);
+            transform: translateY(-95%);
             position: absolute;
             border-bottom: 2px solid $accent-color;
             border-bottom-left-radius: inherit;

@@ -9,7 +9,7 @@
         props: {
             title: String
         },
-        name: "HomerProject"
+        name: "HObject"
     };
 </script>
 
