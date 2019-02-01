@@ -20,6 +20,7 @@
 <style lang="scss" scoped>
     @import "../styles/variables/color.scss";
     @import "../styles/variables/border.scss";
+    @import "../styles/variables/shadow.scss";
 
     .objects-card {
         position: relative;
@@ -32,7 +33,7 @@
         width: 100%;
         flex-wrap: wrap;
         &::before {
-            -webkit-transition: box-shadow 0.2s ease; /* Safari */
+            background: #adadad;
             transition: box-shadow 0.2s ease;
             content: "";
             width: 100%;
@@ -40,13 +41,9 @@
             margin-top: 5px;
             margin-left: 2px;
             position: absolute;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-            border-bottom-left-radius: inherit;
-            border-bottom-right-radius: inherit;
+            @include box-shadow(2);
+            border-radius: inherit;
             z-index: -1;
-        }
-        &:hover::before {
-            box-shadow: 0 14px 22px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
         }
     }
     .objects-card > * {

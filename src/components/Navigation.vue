@@ -32,6 +32,7 @@
 <style lang="scss" scoped>
     @import "../styles/variables/color.scss";
     @import "../styles/variables/border.scss";
+    @import "../styles/variables/shadow.scss";
 
     .navigation {
         display: flex;
@@ -72,6 +73,7 @@
         -webkit-transition: border 0.2s ease; /* Safari */
         transition: border 0.2s ease;
         background-color: $light-primary-color;
+        border-right: 1px $divider-color solid;
         &::before {
             -webkit-transition: box-shadow 0.2s ease; /* Safari */
             transition: box-shadow 0.2s ease;
@@ -79,7 +81,7 @@
             width: 100%;
             height: 100%;
             position: absolute;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            @include box-shadow(1);
             border-bottom-left-radius: inherit;
             border-bottom-right-radius: inherit;
             z-index: -1;
@@ -99,8 +101,7 @@
 
 
     .router-link-active::before {
-        box-shadow: 0 19px 38px rgba(40, 77, 154, 0.1), 0 15px 12px rgba(39, 78, 156, 0.12);
-        -webkit-transition: box-shadow 0.2s ease; /* Safari */
+        @include box-shadow(3);
         transition: box-shadow 0.2s ease;
         content: "";
         width: 100%;

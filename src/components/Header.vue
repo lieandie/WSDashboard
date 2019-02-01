@@ -58,7 +58,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        background-color: $accent-color;
+        background: $accent-color;
         color: $accent-text-color;
         padding: 2px 6px;
         border-top-right-radius: 12px;
