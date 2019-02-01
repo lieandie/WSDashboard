@@ -81,7 +81,7 @@
             width: 100%;
             height: 100%;
             position: absolute;
-            @include box-shadow(1);
+            @include box-shadow(2);
             border-bottom-left-radius: inherit;
             border-bottom-right-radius: inherit;
             z-index: -1;
@@ -101,7 +101,7 @@
 
 
     .router-link-active::before {
-        box-shadow: 0 10px 20px rgba(0, 116, 217, 0.16), 0 6px 6px rgba(0, 116, 217, 0.20);
+        @include box-shadow(3);
         transition: box-shadow 0.2s ease;
         content: "";
         width: 100%;
@@ -118,5 +118,6 @@
 
     .navigation .nav__button:last-child {
         border-bottom-right-radius: $primary-border-radius;
+        border-right: none;
     }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div class="services">
-        <div class="row">
-            <objects-card title="Среды">
+        <div class="services__container">
+            <objects-card title="RU86B3">
                 <div class="card-content">
                     <h-object title="WebService"/>
                     <h-object title="WebService"/>
@@ -9,7 +9,7 @@
                     <h-object title="WebService"/>
                 </div>
             </objects-card>
-            <objects-card title="Проекты">
+            <objects-card title="RU86B5">
                 <div class="card-content">
                     <h-object title="WebService"/>
                     <h-object title="PrintServer"/>
@@ -20,9 +20,7 @@
                     <h-object title="WPS"/>
                 </div>
             </objects-card>
-        </div>
-        <div class="row">
-            <objects-card title="Сервисы">
+            <objects-card title="RU87B2">
                 <div class="card-content">
                     <h-object title="WebService"/>
                     <h-object title="PrintServer"/>
@@ -30,16 +28,6 @@
                     <h-object title="WebClient"/>
                     <h-object title="CIF"/>
                     <h-object title="Reporting-service"/>
-                    <h-object title="WPS"/>
-                    <h-object title="WebService"/>
-                    <h-object title="PrintServer"/>
-                    <h-object title="CreditBroker"/>
-                    <h-object title="WebClient"/>
-                    <h-object title="CIF"/>
-                    <h-object title="Reporting-service"/>
-                    <h-object title="Reporting-service"/>
-                    <h-object title="Reporting-service"/>
-                    <h-object title="WPS"/>
                     <h-object title="WPS"/>
                 </div>
             </objects-card>
@@ -66,28 +54,22 @@
         width: 100%;
     }
 
-    .row:last-child {
-        margin-top: 4px;
+    .services__container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
     }
 
-    .row .div:first-child {
-        flex-grow: 1;
-    }
-
-    .row .div:last-child {
-        flex-grow: 1;
-    }
-
-    .row > div {
-        flex-grow: 1;
+    .services__container > * {
+        flex: 0 0 calc(50% - 8px);
+        margin: 4px;
     }
 
     .card-content {
         flex-direction: row;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-        margin: 4px;
+        padding: 6px;
     }
 
     .card-content > div {

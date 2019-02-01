@@ -1,9 +1,9 @@
 <template>
     <div class="objects-card">
-        <div class="objects-card__title">
+        <slot/>
+        <div class="objects-card__title" v-bind:style="{background: color}">
             {{title}}
         </div>
-            <slot/>
     </div>
 </template>
 
@@ -13,6 +13,11 @@
         props: {
             title: String,
             objects: []
+        },
+        data: function () {
+            return {
+                color: '#' + (Math.random() * 0xFFFFFF << 0).toString(16)
+            };
         }
     }
 </script>
@@ -26,32 +31,31 @@
         position: relative;
         background-color: $light-primary-color;
         border-radius: $primary-border-radius;
-        margin: 4px;
+        @include box-shadow(1);
         display: flex;
+        overflow: hidden;
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
         width: 100%;
         flex-wrap: wrap;
-        &::before {
-            background: #8c8c8c;
-            transition: box-shadow 0.2s ease;
-            content: "";
-            width: 100%;
-            height: 100%;
-            margin-top: 5px;
-            margin-left: 2px;
-            position: absolute;
-            @include box-shadow(2);
-            border-radius: inherit;
-            z-index: -1;
-        }
     }
+
     .objects-card > * {
         width: 100%;
     }
+
+    .objects-card div:first-child {
+        margin-bottom: auto;
+    }
+
     .objects-card__title {
-        text-align: center;
-        margin: 4px;
+        color: white;
+        padding: 6px;
+        font-weight: bold;
+        background-color: $bg-header-color;
+        align-self: end;
+        position: relative;
+        text-align: left;
     }
 
 </style>

@@ -1,5 +1,6 @@
 <template>
     <div class="app">
+        <div class="overlay"></div>
         <Header/>
         <main>
             <router-view/>
@@ -32,8 +33,15 @@
         margin-top: 18px;
     }
 
-    .row {
-        display: flex;
+    .overlay {
+        width: 100%;
+        height: 10%;
+        min-height: 150px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $bg-header-color;
+        z-index: -1;
     }
 </style>
 

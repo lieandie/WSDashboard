@@ -41,6 +41,7 @@
 
 <style lang="scss" scoped>
     @import "../styles/variables/color.scss";
+    @import "../styles/variables/border.scss";
 
     header {
         display: flex;
@@ -50,7 +51,7 @@
     }
 
     .header__logo{
-        fill: $accent-color;
+        fill: $accent-text-color;
     }
 
     .header__user {
@@ -61,7 +62,7 @@
         background: $accent-color;
         color: $accent-text-color;
         padding: 2px 6px;
-        border-top-right-radius: 12px;
+        border-top-right-radius: $primary-border-radius;
     }
 
     .header__user-username {
