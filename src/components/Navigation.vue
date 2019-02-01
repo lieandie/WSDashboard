@@ -99,7 +99,7 @@
 
 
     .router-link-active::before {
-        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+        box-shadow: 0 19px 38px rgba(40, 77, 154, 0.1), 0 15px 12px rgba(39, 78, 156, 0.12);
         -webkit-transition: box-shadow 0.2s ease; /* Safari */
         transition: box-shadow 0.2s ease;
         content: "";

@@ -31,6 +31,16 @@
                     <h-object title="CIF"/>
                     <h-object title="Reporting-service"/>
                     <h-object title="WPS"/>
+                    <h-object title="WebService"/>
+                    <h-object title="PrintServer"/>
+                    <h-object title="CreditBroker"/>
+                    <h-object title="WebClient"/>
+                    <h-object title="CIF"/>
+                    <h-object title="Reporting-service"/>
+                    <h-object title="Reporting-service"/>
+                    <h-object title="Reporting-service"/>
+                    <h-object title="WPS"/>
+                    <h-object title="WPS"/>
                 </div>
             </objects-card>
         </div>
