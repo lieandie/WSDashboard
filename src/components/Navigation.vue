@@ -101,7 +101,7 @@
 
 
     .router-link-active::before {
-        @include box-shadow(3);
+        box-shadow: 0 10px 20px rgba(0, 116, 217, 0.16), 0 6px 6px rgba(0, 116, 217, 0.20);
         transition: box-shadow 0.2s ease;
         content: "";
         width: 100%;

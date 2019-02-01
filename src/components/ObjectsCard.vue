@@ -33,7 +33,7 @@
         width: 100%;
         flex-wrap: wrap;
         &::before {
-            background: #adadad;
+            background: #8c8c8c;
             transition: box-shadow 0.2s ease;
             content: "";
             width: 100%;

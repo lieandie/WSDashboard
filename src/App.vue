@@ -20,20 +20,10 @@
         width: 100%;
         max-width: 850px;
     }
-    .over {
-        position: absolute;
-        width: 100%;
-        min-height: 100px;
-        height: 5%;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-    }
 
     body {
         margin: 0;
-        background-color: $bg-color;
+        background-color: #616161;
         display: flex;
         justify-content: center;
     }
