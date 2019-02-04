@@ -1,12 +1,21 @@
 <template>
     <div class="card">
-        <slot/>
+        <slot name="content">
+            <div class="card__content_default">
+                Нет информации :(
+            </div>
+        </slot>
         <div class="card__bottom" :style="{background: color}">
             <div class="card__title">{{title}}</div>
             <div class="card__content-filter">
-                <label>
-                    <input v-model="filter" type="text">
-                </label>
+                <div class="card__content-filter_button" @click="toggleFilterInput">
+                    <fai icon="filter"/>
+                </div>
+                <div :class="{hidden:isFilterInputHidden}" class="card__content-filter_input">
+                    <label>
+                        <input v-model="filterExpression" type="text">
+                    </label>
+                </div>
             </div>
         </div>
     </div>
@@ -23,8 +32,14 @@
         data: function () {
             return {
                 color: intToHSL(hashCode(this.title)),
-                filter: ""
+                filterExpression: "",
+                isFilterInputHidden: true
             };
+        },
+        methods: {
+            toggleFilterInput: function () {
+                this.isFilterInputHidden = !this.isFilterInputHidden;
+            }
         }
     }
 
@@ -82,16 +97,45 @@
     }
 
     .card__content-filter {
-        flex-grow: 2;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
 
         & input[type=text] {
             background-color: transparent;
-            color: rgba(255, 255, 255, 0.5);
+            color: white;
             border: none;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            border-bottom: 1px solid white;
             outline: none;
             width: 100%;
+            margin-bottom: -1px;
         }
+    }
+
+    .card__content_default {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        padding-top: 5%;
+        padding-bottom: 5%;
+
+    }
+
+    .card__content-filter_input {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        transition: width .5s ease-in-out;
+    }
+
+    .card__content-filter_button {
+        margin-right: 2px;
+    }
+
+    .hidden {
+        width: 0;
     }
 
 </style>

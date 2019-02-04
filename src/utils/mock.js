@@ -7,31 +7,38 @@ export const store = {
                 projects: [
                     {
                         id: 0,
-                        title: "WebService"
+                        title: "WebService",
+                        online: true
                     },
                     {
                         id: 1,
-                        title: "CIF"
+                        title: "CIF",
+                        online: true
                     },
                     {
                         id: 2,
-                        title: "PrintServer"
+                        title: "PrintServer",
+                        online: true
                     },
                     {
                         id: 3,
-                        title: "EventHub"
+                        title: "EventHub",
+                        online: true
                     },
                     {
                         id: 4,
-                        title: "LegalCollection"
+                        title: "LegalCollection",
+                        online: false
                     },
                     {
                         id: 5,
-                        title: "ScanServer"
+                        title: "ScanServer",
+                        online: true
                     },
                     {
                         id: 6,
-                        title: "Oracle"
+                        title: "Oracle",
+                        online: true
                     }
                 ]
             },
@@ -41,31 +48,38 @@ export const store = {
                 projects: [
                     {
                         id: 0,
-                        title: "WebService"
+                        title: "WebService",
+                        online: true
                     },
                     {
                         id: 1,
-                        title: "CIF"
+                        title: "CIF",
+                        online: false
                     },
                     {
                         id: 2,
-                        title: "PrintServer"
+                        title: "PrintServer",
+                        online: true
                     },
                     {
                         id: 3,
-                        title: "EventHub"
+                        title: "EventHub",
+                        online: true
                     },
                     {
                         id: 4,
-                        title: "LegalCollection"
+                        title: "LegalCollection",
+                        online: true
                     },
                     {
                         id: 5,
-                        title: "ScanServer"
+                        title: "ScanServer",
+                        online: false
                     },
                     {
                         id: 6,
-                        title: "Oracle"
+                        title: "Oracle",
+                        online: true
                     }
                 ]
             },
@@ -75,31 +89,38 @@ export const store = {
                 projects: [
                     {
                         id: 0,
-                        title: "WebService"
+                        title: "WebService",
+                        online: true
                     },
                     {
                         id: 1,
-                        title: "CIF"
+                        title: "CIF",
+                        online: true
                     },
                     {
                         id: 2,
-                        title: "PrintServer"
+                        title: "PrintServer",
+                        online: true
                     },
                     {
                         id: 3,
-                        title: "EventHub"
+                        title: "EventHub",
+                        online: false
                     },
                     {
                         id: 4,
-                        title: "LegalCollection"
+                        title: "LegalCollection",
+                        online: true
                     },
                     {
                         id: 5,
-                        title: "ScanServer"
+                        title: "ScanServer",
+                        online: true
                     },
                     {
                         id: 6,
-                        title: "Oracle"
+                        title: "Oracle",
+                        online: true
                     }
                 ]
             },
@@ -109,31 +130,38 @@ export const store = {
                 projects: [
                     {
                         id: 0,
-                        title: "WebService"
+                        title: "WebService",
+                        online: true
                     },
                     {
                         id: 1,
-                        title: "CIF"
+                        title: "CIF",
+                        online: false
                     },
                     {
                         id: 2,
-                        title: "PrintServer"
+                        title: "PrintServer",
+                        online: true
                     },
                     {
                         id: 3,
-                        title: "EventHub"
+                        title: "EventHub",
+                        online: true
                     },
                     {
                         id: 4,
-                        title: "LegalCollection"
+                        title: "LegalCollection",
+                        online: true
                     },
                     {
                         id: 5,
-                        title: "ScanServer"
+                        title: "ScanServer",
+                        online: true
                     },
                     {
                         id: 6,
-                        title: "Oracle"
+                        title: "Oracle",
+                        online: false
                     }
                 ]
             },
@@ -143,31 +171,38 @@ export const store = {
                 projects: [
                     {
                         id: 0,
-                        title: "WebService"
+                        title: "WebService",
+                        online: true
                     },
                     {
                         id: 1,
-                        title: "CIF"
+                        title: "CIF",
+                        online: true
                     },
                     {
                         id: 2,
-                        title: "PrintServer"
+                        title: "PrintServer",
+                        online: true
                     },
                     {
                         id: 3,
-                        title: "EventHub"
+                        title: "EventHub",
+                        online: false
                     },
                     {
                         id: 4,
-                        title: "LegalCollection"
+                        title: "LegalCollection",
+                        online: true
                     },
                     {
                         id: 5,
-                        title: "ScanServer"
+                        title: "ScanServer",
+                        online: true
                     },
                     {
                         id: 6,
-                        title: "Oracle"
+                        title: "Oracle",
+                        online: true
                     }
                 ]
             },
@@ -177,31 +212,38 @@ export const store = {
                 projects: [
                     {
                         id: 0,
-                        title: "WebService"
+                        title: "WebService",
+                        online: true
                     },
                     {
                         id: 1,
-                        title: "CIF"
+                        title: "CIF",
+                        online: true
                     },
                     {
                         id: 2,
-                        title: "PrintServer"
+                        title: "PrintServer",
+                        online: true
                     },
                     {
                         id: 3,
-                        title: "EventHub"
+                        title: "EventHub",
+                        online: true
                     },
                     {
                         id: 4,
-                        title: "LegalCollection"
+                        title: "LegalCollection",
+                        online: true
                     },
                     {
                         id: 5,
-                        title: "ScanServer"
+                        title: "ScanServer",
+                        online: true
                     },
                     {
                         id: 6,
-                        title: "Oracle"
+                        title: "Oracle",
+                        online: true
                     }
                 ]
             },
@@ -211,35 +253,43 @@ export const store = {
                 projects: [
                     {
                         id: 0,
-                        title: "WebService"
+                        title: "WebService",
+                        online: true
                     },
                     {
                         id: 1,
-                        title: "CIF"
+                        title: "CIF",
+                        online: true
                     },
                     {
                         id: 2,
-                        title: "PrintServer"
+                        title: "PrintServer",
+                        online: true
                     },
                     {
                         id: 3,
-                        title: "EventHub"
+                        title: "EventHub",
+                        online: true
                     },
                     {
                         id: 4,
-                        title: "LegalCollection"
+                        title: "LegalCollection",
+                        online: false
                     },
                     {
                         id: 5,
-                        title: "ScanServer"
+                        title: "ScanServer",
+                        online: true
                     },
                     {
                         id: 6,
-                        title: "Oracle"
+                        title: "Oracle",
+                        online: true
                     },
                     {
                         id: 7,
-                        title: "CreditBroker"
+                        title: "CreditBroker",
+                        online: true
                     }
                 ]
             },
@@ -249,34 +299,46 @@ export const store = {
                 projects: [
                     {
                         id: 0,
-                        title: "WebService"
+                        title: "WebService",
+                        online: true
                     },
                     {
                         id: 1,
-                        title: "CIF"
+                        title: "CIF",
+                        online: true
                     },
                     {
                         id: 2,
-                        title: "PrintServer"
+                        title: "PrintServer",
+                        online: true
                     },
                     {
                         id: 3,
-                        title: "EventHub"
+                        title: "EventHub",
+                        online: true
                     },
                     {
                         id: 4,
-                        title: "LegalCollection"
+                        title: "LegalCollection",
+                        online: true
                     },
                     {
                         id: 5,
-                        title: "ScanServer"
+                        title: "ScanServer",
+                        online: true
                     },
                     {
                         id: 6,
-                        title: "Oracle"
+                        title: "Oracle",
+                        online: true
                     }
                 ]
             },
+            {
+                id: 9,
+                title: "LOAD01C1",
+                projects: []
+            }
         ]
     }
-}
+};

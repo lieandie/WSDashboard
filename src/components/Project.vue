@@ -1,5 +1,5 @@
 <template>
-    <div class="service">
+    <div class="service" :class="{service_online: isOnline}">
         {{ title }}
     </div>
 </template>
@@ -7,9 +7,10 @@
 <script>
     export default {
         props: {
-            title: String
+            title: String,
+            isOnline: Boolean
         },
-        name: "Service"
+        name: "Project"
     };
 </script>
 
@@ -19,9 +20,13 @@
 
     .service {
         text-align: center;
-        border: 1.5px solid $accent-color;
+        border: 1.5px solid transparent;
         padding: 4px;
         border-radius: $primary-border-radius;
         cursor: pointer;
+        background: $service-offline-color;
+    }
+    .service_online{
+        background: $service-online-color;
     }
 </style>

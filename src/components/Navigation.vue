@@ -1,6 +1,6 @@
 <template>
     <nav class="navigation">
-        <router-link to="/services" class="navigation__button">
+        <router-link to="/projects" class="navigation__button">
             <div class="navigation__link">
                 <fai icon="cubes" size="1x"/>
                 <span>Сервисы</span>

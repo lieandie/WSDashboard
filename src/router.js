@@ -7,9 +7,9 @@ export default new Router({
   linkActiveClass: "router-link-active",
   routes: [
     {
-      path: "/services",
-      name: "services",
-      component: () => import("./views/Services.vue")
+      path: "/projects",
+      name: "projects",
+      component: () => import("./views/Projects.vue")
     },
     {
       path: "/favourites",
