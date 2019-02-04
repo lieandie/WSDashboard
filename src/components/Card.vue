@@ -13,6 +13,7 @@
 </template>
 
 <script>
+
     export default {
         name: "Card",
         props: {
@@ -21,9 +22,23 @@
         },
         data: function () {
             return {
-                color: '#' + (Math.random() * 0xFFFFFF << 0).toString(16)
+                color: intToHSL(hashCode(this.title))
             };
         }
+    }
+
+    function hashCode(string) {
+        let hash = 0;
+        if (string.length === 0) return hash;
+        for (var i = 0; i < string.length; i++) {
+            hash = string.charCodeAt(i) + ((hash << 5) - hash);
+        }
+        return hash;
+    }
+
+    function intToHSL(int) {
+        let shortened = int * 5 % 360;
+        return "hsl(" + shortened + ", 50%, 50%)";
     }
 </script>
 
