@@ -1,11 +1,11 @@
 <template>
     <div class="card">
         <slot/>
-        <div class="card__bottom" v-bind:style="{background: color}">
+        <div class="card__bottom" :style="{background: color}">
             <div class="card__title">{{title}}</div>
             <div class="card__content-filter">
                 <label>
-                    <input type="text">
+                    <input v-model="filter" type="text">
                 </label>
             </div>
         </div>
@@ -22,7 +22,8 @@
         },
         data: function () {
             return {
-                color: intToHSL(hashCode(this.title))
+                color: intToHSL(hashCode(this.title)),
+                filter: ""
             };
         }
     }

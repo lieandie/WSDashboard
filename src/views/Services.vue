@@ -1,44 +1,8 @@
 <template>
     <div class="services">
-        <card title="RU86B3">
+        <card v-for="environment in environments" :key="environment.id" :title="environment.title">
             <div class="card-content">
-                <service title="WebService"/>
-                <service title="WebService"/>
-                <service title="WebService"/>
-                <service title="WebService"/>
-            </div>
-        </card>
-        <card title="RU86B5">
-            <div class="card-content">
-                <service title="WebService"/>
-                <service title="PrintServer"/>
-                <service title="CreditBroker"/>
-                <service title="WebClient"/>
-                <service title="CIF"/>
-                <service title="Reporting-service"/>
-                <service title="WPS"/>
-            </div>
-        </card>
-        <card title="RU87B2">
-            <div class="card-content">
-                <service title="WebService"/>
-                <service title="PrintServer"/>
-                <service title="CreditBroker"/>
-                <service title="WebClient"/>
-                <service title="CIF"/>
-                <service title="Reporting-service"/>
-                <service title="WPS"/>
-            </div>
-        </card>
-        <card title="RU87C1">
-            <div class="card-content">
-                <service title="WebService"/>
-                <service title="PrintServer"/>
-                <service title="CreditBroker"/>
-                <service title="WebClient"/>
-                <service title="CIF"/>
-                <service title="Reporting-service"/>
-                <service title="WPS"/>
+                <service  v-for="project in environment.projects" :key="project.id" :title="project.title"/>
             </div>
         </card>
     </div>
@@ -47,11 +11,17 @@
 <script>
     import Service from "../components/Service";
     import Card from "../components/Card";
+    import {store} from "../utils/mock";
 
     export default {
         name: "projects",
         components: {
             Card, Service
+        },
+        data: function () {
+            return {
+                environments: store.state.environments
+            };
         }
     };
 </script>
