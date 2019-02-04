@@ -7,14 +7,21 @@
         </slot>
         <div class="card__bottom" :style="{background: color}">
             <div class="card__title">{{title}}</div>
-            <div class="card__content-filter">
-                <div class="card__content-filter_button" @click="toggleFilterInput">
-                    <fai icon="filter"/>
+            <div class="card_bottom_actions">
+                <div class="card__content_interactive card__content-favourite">
+                    <div class=" card__content-button card__content-favourite_button">
+                        <fai icon="star" size="sm"/>
+                    </div>
                 </div>
-                <div :class="{hidden:isFilterInputHidden}" class="card__content-filter_input">
-                    <label>
-                        <input v-model="filterExpression" type="text">
-                    </label>
+                <div class="card__content_interactive card__content-filter">
+                    <div class="card__content-button card__content-filter_button" @click="toggleFilterInput">
+                        <fai icon="filter" size="sm"/>
+                    </div>
+                    <div v-show="!isFilterInputHidden" class="card__content-filter_input">
+                        <label>
+                            <input v-model="filterExpression" type="text" ref="filterInput">
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
@@ -39,6 +46,11 @@
         methods: {
             toggleFilterInput: function () {
                 this.isFilterInputHidden = !this.isFilterInputHidden;
+                if (!this.isFilterInputHidden) {
+                    this.$nextTick(() => {
+                        this.$refs.filterInput.focus();
+                    })
+                }
             }
         }
     }
@@ -74,25 +86,21 @@
         align-items: stretch;
         width: 100%;
         flex-wrap: wrap;
-
-        div:first-child {
-            margin-bottom: auto;
-        }
     }
 
     .card__bottom {
         color: white;
-        padding: 6px;
         font-weight: bold;
         background-color: $bg-header-color;
         position: relative;
         text-align: left;
         display: flex;
+        margin-top: auto;
     }
 
 
     .card__title {
-        padding: 0;
+        padding: 6px;
         flex-grow: 1;
     }
 
@@ -106,10 +114,7 @@
             background-color: transparent;
             color: white;
             border: none;
-            border-bottom: 1px solid white;
             outline: none;
-            width: 100%;
-            margin-bottom: -1px;
         }
     }
 
@@ -127,15 +132,28 @@
         flex-direction: row;
         align-items: center;
         width: 100%;
-        transition: width .5s ease-in-out;
     }
 
-    .card__content-filter_button {
-        margin-right: 2px;
+    .card__content_interactive {
+        @include box-shadow(3);
+        border-bottom-left-radius: $primary-border-radius;
     }
 
-    .hidden {
-        width: 0;
+    .card__content-button {
+        margin: 2px 4px 2px 4px;
+        height: 100%;
+        cursor: pointer;
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
     }
+
+    .card_bottom_actions {
+        display: flex;
+        flex-direction: row;
+    }
+
 
 </style>
