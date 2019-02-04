@@ -2,7 +2,12 @@
     <div class="objects-card">
         <slot/>
         <div class="objects-card__title" v-bind:style="{background: color}">
-            {{title}}
+            <div class="title">{{title}}</div>
+            <div class="filter">
+                <label>
+                    <input type="text">
+                </label>
+            </div>
         </div>
     </div>
 </template>
@@ -38,14 +43,10 @@
         align-items: stretch;
         width: 100%;
         flex-wrap: wrap;
-    }
 
-    .objects-card > * {
-        width: 100%;
-    }
-
-    .objects-card div:first-child {
-        margin-bottom: auto;
+        div:first-child {
+            margin-bottom: auto;
+        }
     }
 
     .objects-card__title {
@@ -53,9 +54,22 @@
         padding: 6px;
         font-weight: bold;
         background-color: $bg-header-color;
-        align-self: end;
         position: relative;
         text-align: left;
+        display: flex;
+    }
+
+    input[type=text] {
+        background-color: transparent;
+        color: white;
+        border: none;
+        border-bottom: 1px solid white;
+        outline: none;
+    }
+
+    .title {
+        padding: 0;
+        margin: 0 auto 0 0;
     }
 
 </style>
