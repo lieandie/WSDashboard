@@ -1,7 +1,7 @@
 <template>
     <header class="header">
-        <logo/>
-        <user username="Drakula Drakula Drakula"/>
+        <logo class="header__logo"/>
+        <user class="header__user" username="Drakula Drakula Drakula"/>
         <navigation class="header__navigation"/>
     </header>
 </template>
@@ -33,7 +33,12 @@
         width: 100%;
     }
 
-    .header__logo {
-        fill: $accent-text-color;
+    @media screen and (max-width: 540px) {
+        .header__logo {
+            display: none;
+        }
+        .header__navigation {
+            min-height: 50px;
+        }
     }
 </style>

@@ -62,16 +62,19 @@
 
     .card__title {
         padding: 0;
-        margin: 0 auto 0 0;
+        flex-grow: 1;
     }
 
     .card__content-filter {
+        flex-grow: 2;
+
         & input[type=text] {
             background-color: transparent;
-            color: white;
+            color: rgba(255, 255, 255, 0.5);
             border: none;
-            border-bottom: 1px solid white;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
             outline: none;
+            width: 100%;
         }
     }
 

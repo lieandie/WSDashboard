@@ -68,6 +68,9 @@
 
     .header__button {
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         -webkit-transition: border 0.2s ease; /* Safari */
         transition: border 0.2s ease;
@@ -91,7 +94,6 @@
             content: "";
             width: 100%;
             height: 100%;
-            transform: translateY(-95%);
             position: absolute;
             border-bottom: 2px solid $accent-color;
             border-bottom-left-radius: inherit;

@@ -43,6 +43,12 @@
         background: $bg-header-color;
         z-index: -1;
     }
+
+    @media screen and (min-width: 1280px) {
+        .app {
+            max-width: none;
+        }
+    }
 </style>
 
 <script>

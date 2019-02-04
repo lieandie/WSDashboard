@@ -4,7 +4,7 @@
             width="249"
             height="18"
             viewBox="0 0 249 18"
-            class="header__logo"
+            class="logo"
     >
         <g fill-rule="evenodd">
             <path
@@ -25,10 +25,10 @@
     }
 </script>
 
-<style scoped>
-    @media screen and (max-width: 540px) {
-        .header__logo {
-            display: none;
-        }
+<style lang="scss" scoped>
+    @import "../styles/variables/color.scss";
+
+    .logo {
+        fill: $accent-text-color;
     }
 </style>
