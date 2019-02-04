@@ -21,7 +21,7 @@
     @import "../styles/variables/color.scss";
     @import "../styles/variables/border.scss";
 
-    header {
+    .header {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -37,8 +37,17 @@
         .header__logo {
             display: none;
         }
+
         .header__navigation {
             min-height: 50px;
+        }
+
+        .header__user {
+            min-height: 30px;
+        }
+
+        .header {
+            justify-content: flex-end;
         }
     }
 </style>

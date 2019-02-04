@@ -1,19 +1,19 @@
 <template>
-    <nav class="header">
-        <router-link to="/services" class="header__button">
-            <div class="header__link">
+    <nav class="navigation">
+        <router-link to="/services" class="navigation__button">
+            <div class="navigation__link">
                 <fai icon="cubes" size="1x"/>
                 <span>Сервисы</span>
             </div>
         </router-link>
-        <router-link to="/favourites" class="header__button">
-            <div class="header__link">
+        <router-link to="/favourites" class="navigation__button">
+            <div class="navigation__link">
                 <fai icon="star" size="1x"/>
                 <span>Избранные</span>
             </div>
         </router-link>
-        <router-link to="/settings" class="header__button">
-            <div class="header__link">
+        <router-link to="/settings" class="navigation__button">
+            <div class="navigation__link">
                 <fai icon="cog" size="1x"/>
                 <span>Настройки</span>
             </div>
@@ -33,16 +33,16 @@
     @import "../styles/variables/border.scss";
     @import "../styles/variables/shadow.scss";
 
-    .header {
+    .navigation {
         display: flex;
         justify-content: space-evenly;
     }
 
-    .header > * {
+    .navigation > * {
         color: $primary-text-color;
     }
 
-    .header__link {
+    .navigation__link {
         display: flex;
         width: 100%;
         align-content: center;
@@ -51,7 +51,7 @@
         padding-top: 4px;
     }
 
-    .header__link * {
+    .navigation__link * {
         margin-left: 4px;
     }
 
@@ -66,7 +66,7 @@
         text-decoration: none;
     }
 
-    .header__button {
+    .navigation__button {
         position: relative;
         display: flex;
         justify-content: center;
@@ -115,11 +115,11 @@
         z-index: 1;
     }
 
-    .header .header__button:first-child {
+    .navigation .navigation__button:first-child {
         border-bottom-left-radius: $primary-border-radius;
     }
 
-    .header .header__button:last-child {
+    .navigation .navigation__button:last-child {
         border-bottom-right-radius: $primary-border-radius;
         border-right: none;
     }
