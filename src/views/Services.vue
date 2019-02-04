@@ -1,79 +1,72 @@
 <template>
     <div class="services">
-        <div class="services__container">
-            <objects-card title="RU86B3">
-                <div class="card-content">
-                    <h-object title="WebService"/>
-                    <h-object title="WebService"/>
-                    <h-object title="WebService"/>
-                    <h-object title="WebService"/>
-                </div>
-            </objects-card>
-            <objects-card title="RU86B5">
-                <div class="card-content">
-                    <h-object title="WebService"/>
-                    <h-object title="PrintServer"/>
-                    <h-object title="CreditBroker"/>
-                    <h-object title="WebClient"/>
-                    <h-object title="CIF"/>
-                    <h-object title="Reporting-service"/>
-                    <h-object title="WPS"/>
-                </div>
-            </objects-card>
-            <objects-card title="RU87B2">
-                <div class="card-content">
-                    <h-object title="WebService"/>
-                    <h-object title="PrintServer"/>
-                    <h-object title="CreditBroker"/>
-                    <h-object title="WebClient"/>
-                    <h-object title="CIF"/>
-                    <h-object title="Reporting-service"/>
-                    <h-object title="WPS"/>
-                </div>
-            </objects-card>
-            <objects-card title="RU87B2">
-                <div class="card-content">
-                    <h-object title="WebService"/>
-                    <h-object title="PrintServer"/>
-                    <h-object title="CreditBroker"/>
-                    <h-object title="WebClient"/>
-                    <h-object title="CIF"/>
-                    <h-object title="Reporting-service"/>
-                    <h-object title="WPS"/>
-                </div>
-            </objects-card>
-        </div>
+        <card title="RU86B3">
+            <div class="card-content">
+                <service title="WebService"/>
+                <service title="WebService"/>
+                <service title="WebService"/>
+                <service title="WebService"/>
+            </div>
+        </card>
+        <card title="RU86B5">
+            <div class="card-content">
+                <service title="WebService"/>
+                <service title="PrintServer"/>
+                <service title="CreditBroker"/>
+                <service title="WebClient"/>
+                <service title="CIF"/>
+                <service title="Reporting-service"/>
+                <service title="WPS"/>
+            </div>
+        </card>
+        <card title="RU87B2">
+            <div class="card-content">
+                <service title="WebService"/>
+                <service title="PrintServer"/>
+                <service title="CreditBroker"/>
+                <service title="WebClient"/>
+                <service title="CIF"/>
+                <service title="Reporting-service"/>
+                <service title="WPS"/>
+            </div>
+        </card>
+        <card title="RU87C1">
+            <div class="card-content">
+                <service title="WebService"/>
+                <service title="PrintServer"/>
+                <service title="CreditBroker"/>
+                <service title="WebClient"/>
+                <service title="CIF"/>
+                <service title="Reporting-service"/>
+                <service title="WPS"/>
+            </div>
+        </card>
     </div>
 </template>
 
 <script>
-    import HObject from "../components/Service";
-    import ObjectsCard from "../components/Card";
+    import Service from "../components/Service";
+    import Card from "../components/Card";
 
     export default {
         name: "projects",
         components: {
-            ObjectsCard, HObject
+            Card, Service
         }
     };
 </script>
 
 <style lang="scss" scoped>
-    .services {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
 
-    .services__container {
+    .services {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-    }
 
-    .services__container > * {
-        flex: 0 0 calc(50% - 8px);
-        margin: 4px;
+        & > * {
+            flex: 0 0 calc(50% - 8px);
+            margin: 4px;
+        }
     }
 
     .card-content {
@@ -87,14 +80,14 @@
         margin: 2px;
     }
 
-    @media screen and (max-width: 540px){
-        .services__container > * {
+    @media screen and (max-width: 540px) {
+        .services > * {
             flex: 0 0 calc(100% - 8px);
         }
     }
 
     @media screen and (min-width: 1280px) {
-        .services__container > * {
+        .services > * {
             flex: 0 0 calc(33.3% - 8px);
         }
     }
