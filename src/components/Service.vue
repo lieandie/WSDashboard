@@ -9,7 +9,7 @@
         props: {
             title: String
         },
-        name: "HObject"
+        name: "Service"
     };
 </script>
 

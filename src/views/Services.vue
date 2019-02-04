@@ -36,8 +36,8 @@
 </template>
 
 <script>
-    import HObject from "../components/HObject";
-    import ObjectsCard from "../components/ObjectsCard";
+    import HObject from "../components/Service";
+    import ObjectsCard from "../components/Card";
 
     export default {
         name: "projects",
@@ -74,5 +74,11 @@
 
     .card-content > div {
         margin: 2px;
+    }
+
+    @media screen and (max-width: 540px){
+        .services__container > * {
+            flex: 0 0 calc(100% - 8px);
+        }
     }
 </style>

@@ -1,19 +1,19 @@
 <template>
-    <nav class="navigation">
-        <router-link to="/services" class="nav__button">
-            <div class="container__link">
+    <nav class="header">
+        <router-link to="/services" class="header__button">
+            <div class="header__link">
                 <fai icon="cubes" size="1x"/>
                 <span>Сервисы</span>
             </div>
         </router-link>
-        <router-link to="/favourites" class="nav__button">
-            <div class="container__link">
+        <router-link to="/favourites" class="header__button">
+            <div class="header__link">
                 <fai icon="star" size="1x"/>
                 <span>Избранные</span>
             </div>
         </router-link>
-        <router-link to="/settings" class="nav__button">
-            <div class="container__link">
+        <router-link to="/settings" class="header__button">
+            <div class="header__link">
                 <fai icon="cog" size="1x"/>
                 <span>Настройки</span>
             </div>
@@ -28,22 +28,21 @@
 </script>
 
 
-
 <style lang="scss" scoped>
     @import "../styles/variables/color.scss";
     @import "../styles/variables/border.scss";
     @import "../styles/variables/shadow.scss";
 
-    .navigation {
+    .header {
         display: flex;
         justify-content: space-evenly;
     }
 
-    .navigation > * {
+    .header > * {
         color: $primary-text-color;
     }
 
-    .container__link {
+    .header__link {
         display: flex;
         width: 100%;
         align-content: center;
@@ -52,7 +51,7 @@
         padding-top: 4px;
     }
 
-    .container__link * {
+    .header__link * {
         margin-left: 4px;
     }
 
@@ -67,13 +66,14 @@
         text-decoration: none;
     }
 
-    .nav__button {
+    .header__button {
         position: relative;
         width: 100%;
         -webkit-transition: border 0.2s ease; /* Safari */
         transition: border 0.2s ease;
         background-color: $light-primary-color;
         border-right: 1px $divider-color solid;
+
         &::before {
             -webkit-transition: box-shadow 0.2s ease; /* Safari */
             transition: box-shadow 0.2s ease;
@@ -86,6 +86,7 @@
             border-bottom-right-radius: inherit;
             z-index: -1;
         }
+
         &:hover::after {
             content: "";
             width: 100%;
@@ -112,11 +113,11 @@
         z-index: 1;
     }
 
-    .navigation .nav__button:first-child {
+    .header .header__button:first-child {
         border-bottom-left-radius: $primary-border-radius;
     }
 
-    .navigation .nav__button:last-child {
+    .header .header__button:last-child {
         border-bottom-right-radius: $primary-border-radius;
         border-right: none;
     }

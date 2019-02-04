@@ -1,9 +1,9 @@
 <template>
-    <div class="objects-card">
+    <div class="card">
         <slot/>
-        <div class="objects-card__title" v-bind:style="{background: color}">
-            <div class="title">{{title}}</div>
-            <div class="filter">
+        <div class="card__bottom" v-bind:style="{background: color}">
+            <div class="card__title">{{title}}</div>
+            <div class="card__content-filter">
                 <label>
                     <input type="text">
                 </label>
@@ -14,7 +14,7 @@
 
 <script>
     export default {
-        name: "ObjectsCard",
+        name: "Card",
         props: {
             title: String,
             objects: []
@@ -32,7 +32,7 @@
     @import "../styles/variables/border.scss";
     @import "../styles/variables/shadow.scss";
 
-    .objects-card {
+    .card {
         position: relative;
         background-color: $light-primary-color;
         border-radius: $primary-border-radius;
@@ -49,7 +49,7 @@
         }
     }
 
-    .objects-card__title {
+    .card__bottom {
         color: white;
         padding: 6px;
         font-weight: bold;
@@ -59,17 +59,20 @@
         display: flex;
     }
 
-    input[type=text] {
-        background-color: transparent;
-        color: white;
-        border: none;
-        border-bottom: 1px solid white;
-        outline: none;
-    }
 
-    .title {
+    .card__title {
         padding: 0;
         margin: 0 auto 0 0;
+    }
+
+    .card__content-filter {
+        & input[type=text] {
+            background-color: transparent;
+            color: white;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+        }
     }
 
 </style>
