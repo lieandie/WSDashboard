@@ -62,6 +62,7 @@
         font-weight: bold;
         text-align: left;
         margin-top: auto;
+        background: rgba(0, 0, 0, 0.2);
 
         &__title {
             padding: 6px;
@@ -80,8 +81,7 @@
             flex-direction: row;
 
             &_interactive {
-                @include box-shadow(3);
-                border-bottom-left-radius: $primary-border-radius;
+                border-radius: $primary-border-radius;
             }
 
             &_filter {
