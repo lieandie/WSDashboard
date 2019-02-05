@@ -24,7 +24,7 @@
 
 <script>
     export default {
-        name: "Environmentenvironment-card-footerFooter",
+        name: "EnvironmentCardFooter",
         props: {
             title: String
         },
@@ -95,6 +95,7 @@
                     color: white;
                     border: none;
                     outline: none;
+                    width: 100%;
                 }
             }
         }
