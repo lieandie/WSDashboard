@@ -14,7 +14,7 @@
     };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
     @import "../../styles/variables/color";
     @import "../../styles/variables/border";
 
