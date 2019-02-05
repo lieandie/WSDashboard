@@ -1,47 +1,55 @@
 <template>
-    <div class="card" :style="{background: color}">
-        <slot name="content">
-            <div class="card__content_default">
-                Нет информации :(
+    <div class="card__footer">
+        <div class="card__title">{{title}}</div>
+        <div class="card__actions">
+            <div class="card__actions_interactive card__actions_favourite">
+                <div class=" card__footer-button card__content-favourite_button">
+                    <fai icon="star" size="sm"/>
+                </div>
             </div>
-        </slot>
-        <slot name="footer"/>
+            <div class="card__actions_interactive card__actions_filter">
+                <div class="card__footer-button card__content-filter_button" @click="toggleFilterInput">
+                    <fai icon="filter" size="sm"/>
+                </div>
+                <div v-show="!isFilterInputHidden" class="card__content-filter-input">
+                    <label>
+                        <input v-model="filterExpression" type="text" ref="filterInput">
+                    </label>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
-
     export default {
-        name: "Card",
+        name: "EnvironmentCardFooter",
         props: {
-            title: String,
+            title: String
         },
         data: function () {
             return {
-                color: intToHSL(hashCode(this.title))
+                filterExpression: "",
+                isFilterInputHidden: true
+            };
+        },
+        methods: {
+            toggleFilterInput: function () {
+                this.isFilterInputHidden = !this.isFilterInputHidden;
+                if (!this.isFilterInputHidden) {
+                    this.$nextTick(() => {
+                        this.$refs.filterInput.focus();
+                    })
+                }
             }
         }
-    }
-
-    function hashCode(string) {
-        let hash = 0;
-        if (string.length === 0) return hash;
-        for (var i = 0; i < string.length; i++) {
-            hash = string.charCodeAt(i) + ((hash << 5) - hash);
-        }
-        return hash;
-    }
-
-    function intToHSL(int) {
-        let shortened = int * 5 % 30 + 220;
-        return "hsl(" + shortened + ", 50%, 50%)";
     }
 </script>
 
 <style lang="scss">
-    @import "../styles/variables/color.scss";
-    @import "../styles/variables/border.scss";
-    @import "../styles/variables/shadow.scss";
+    @import "../../styles/variables/color";
+    @import "../../styles/variables/border";
+    @import "../../styles/variables/shadow";
 
     .card {
         position: relative;
@@ -95,6 +103,7 @@
                 @include box-shadow(3);
                 border-bottom-left-radius: $primary-border-radius;
             }
+
             &_filter {
                 color: white;
                 display: flex;

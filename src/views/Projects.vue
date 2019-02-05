@@ -1,22 +1,17 @@
 <template>
     <div class="services">
-        <card v-for="environment in environments" :key="environment.id" :title="environment.title">
-            <div slot="content" class="services__card-content" v-if="environment.projects.length > 0">
-                <project v-for="project in environment.projects" :key="project.id" :title="project.title" :is-online="project.online"/>
-            </div>
-        </card>
+        <environment-card v-for="environment in environments" :key="environment.id" :environment="environment"/>
     </div>
 </template>
 
 <script>
-    import Project from "../components/Project";
-    import Card from "../components/Card";
     import {store} from "../utils/mock";
+    import EnvironmentCard from "../components/EnvironmentCard/EnvironmentCard";
 
     export default {
         name: "projects",
         components: {
-            Card, Project
+            EnvironmentCard
         },
         data: function () {
             return {
@@ -40,17 +35,6 @@
         }
     }
 
-    .services__card-content {
-        flex-direction: row;
-        display: flex;
-        flex-wrap: wrap;
-        padding: 6px;
-    }
-
-    .services__card-content > div {
-        margin: 2px;
-        @include box-shadow(1)
-    }
 
     @media screen and (max-width: 540px) {
         .services > * {
