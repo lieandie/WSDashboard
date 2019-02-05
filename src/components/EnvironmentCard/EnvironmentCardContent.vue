@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="environment-card-content">
         <project v-for="project in projects" :key="project.id" :title="project.title"
                  :is-online="project.online"/>
     </div>
@@ -22,14 +22,14 @@
     @import "../../styles/variables/border";
     @import "../../styles/variables/shadow";
 
-    .services__card-content {
+    .environment-card-content {
         flex-direction: row;
         display: flex;
         flex-wrap: wrap;
         padding: 6px;
     }
 
-    .services__card-content > div {
+    .environment-card-content > div {
         margin: 2px;
         @include box-shadow(1);
     }
