@@ -49,6 +49,12 @@
             max-width: none;
         }
     }
+
+    @media screen and (max-width: 540px) {
+        .app {
+            margin: 2% 2%;
+        }
+    }
 </style>
 
 <script>
