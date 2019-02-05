@@ -58,7 +58,7 @@
         overflow: hidden;
         flex-direction: row;
         width: 100%;
-        color: white;
+        color: $accent-text-color;
         font-weight: bold;
         text-align: left;
         margin-top: auto;
@@ -92,7 +92,7 @@
 
                 & input[type=text] {
                     background-color: transparent;
-                    color: white;
+                    color: $accent-text-color;
                     border: none;
                     outline: none;
                     width: 100%;
