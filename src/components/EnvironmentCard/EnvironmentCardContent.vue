@@ -6,7 +6,7 @@
 </template>
 
 <script>
-    import Project from "../Project"
+    import Project from "./Project"
 
     export default {
         name: "EnvironmentCardContent",

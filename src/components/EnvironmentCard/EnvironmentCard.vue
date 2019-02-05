@@ -1,7 +1,7 @@
 <template>
-    <card :title="environment.title">
-        <environment-card-content v-if="environmentHasNoProjects" slot="content" :projects="environment.projects"/>
-        <environment-card-footer slot="footer" :title="environment.title"/>
+    <card :title="getEnvironmentTitle">
+        <environment-card-content v-if="environmentHasNoProjects" slot="content" :projects="getEnvironmentProjects"/>
+        <environment-card-footer slot="footer" :title="getEnvironmentTitle"/>
     </card>
 </template>
 
@@ -19,6 +19,12 @@
         computed: {
             environmentHasNoProjects: function () {
                 return this.environment.projects.length > 0;
+            },
+            getEnvironmentProjects: function () {
+                return this.environment.projects;
+            },
+            getEnvironmentTitle: function () {
+                return this.environment.title;
             }
         }
     }

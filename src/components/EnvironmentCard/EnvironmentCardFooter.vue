@@ -1,17 +1,18 @@
 <template>
-    <div class="card__footer">
-        <div class="card__title">{{title}}</div>
-        <div class="card__actions">
-            <div class="card__actions_interactive card__actions_favourite">
-                <div class=" card__footer-button card__content-favourite_button">
+    <div class="environment-card-footer">
+        <div class="environment-card-footer__title">{{title}}</div>
+        <div class="environment-card-footer__actions">
+            <div class="environment-card-footer__actions_interactive environment-card-footer__actions_favourite">
+                <div class=" environment-card-footer__button environment-card-footer__favourite_button">
                     <fai icon="star" size="sm"/>
                 </div>
             </div>
-            <div class="card__actions_interactive card__actions_filter">
-                <div class="card__footer-button card__content-filter_button" @click="toggleFilterInput">
+            <div class="environment-card-footer__actions_interactive environment-card-footer__actions_filter">
+                <div class="environment-card-footer__button environment-card-footer__filter_button"
+                     @click="toggleFilterInput">
                     <fai icon="filter" size="sm"/>
                 </div>
-                <div v-show="!isFilterInputHidden" class="card__content-filter-input">
+                <div v-show="!isFilterInputHidden" class="environment-card-footer__filter-input">
                     <label>
                         <input v-model="filterExpression" type="text" ref="filterInput">
                     </label>
@@ -23,7 +24,7 @@
 
 <script>
     export default {
-        name: "EnvironmentCardFooter",
+        name: "Environmentenvironment-card-footerFooter",
         props: {
             title: String
         },
@@ -51,44 +52,23 @@
     @import "../../styles/variables/border";
     @import "../../styles/variables/shadow";
 
-    .card {
+    .environment-card-footer {
         position: relative;
-        background-color: $light-primary-color;
-        border-radius: $primary-border-radius;
-        @include box-shadow(1);
         display: flex;
         overflow: hidden;
-        flex-direction: column;
-        align-items: stretch;
+        flex-direction: row;
         width: 100%;
-        flex-wrap: wrap;
+        color: white;
+        font-weight: bold;
+        text-align: left;
+        margin-top: auto;
 
         &__title {
             padding: 6px;
             flex-grow: 1;
         }
 
-        &__footer {
-            color: white;
-            font-weight: bold;
-            position: relative;
-            text-align: left;
-            display: flex;
-            margin-top: auto;
-        }
-
-
-        &__content {
-            &_default {
-                width: 100%;
-                font-size: 18px;
-                text-align: center;
-                padding-top: 5%;
-                padding-bottom: 5%;
-            }
-        }
-
-        &__content-filter-input {
+        &__filter-input {
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -119,7 +99,7 @@
             }
         }
 
-        &__footer-button {
+        &__button {
             margin: 2px 4px 2px 4px;
             height: 100%;
             cursor: pointer;

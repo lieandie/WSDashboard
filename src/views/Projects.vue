@@ -1,5 +1,5 @@
 <template>
-    <div class="services">
+    <div class="projects">
         <environment-card v-for="environment in environments" :key="environment.id" :environment="environment"/>
     </div>
 </template>
@@ -24,7 +24,7 @@
 <style lang="scss" scoped>
     @import "../styles/variables/shadow.scss";
 
-    .services {
+    .projects {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
@@ -37,13 +37,13 @@
 
 
     @media screen and (max-width: 540px) {
-        .services > * {
+        .projects > * {
             flex: 0 0 calc(100% - 8px);
         }
     }
 
     @media screen and (min-width: 1280px) {
-        .services > * {
+        .projects > * {
             flex: 0 0 calc(33.3% - 8px);
         }
     }

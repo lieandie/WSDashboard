@@ -1,5 +1,5 @@
 <template>
-    <div class="service" :class="{service_online: isOnline}">
+    <div class="project" :class="{project_online: isOnline}">
         {{ title }}
     </div>
 </template>
@@ -15,10 +15,10 @@
 </script>
 
 <style lang="scss" scoped>
-    @import "../styles/variables/color.scss";
-    @import "../styles/variables/border.scss";
+    @import "../../styles/variables/color";
+    @import "../../styles/variables/border";
 
-    .service {
+    .project {
         text-align: center;
         border: 1.5px solid transparent;
         padding: 4px;
@@ -26,7 +26,7 @@
         cursor: pointer;
         background: $service-offline-color;
     }
-    .service_online{
+    .project_online{
         background: $service-online-color;
     }
 </style>

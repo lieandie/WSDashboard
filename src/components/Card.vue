@@ -34,7 +34,7 @@
 
     function intToHSL(int) {
         let shortened = int * 5 % 30 + 220;
-        return "hsl(" + shortened + ", 50%, 50%)";
+        return "hsl(" + shortened + ", 75%, 60%)";
     }
 </script>
 
@@ -55,70 +55,15 @@
         width: 100%;
         flex-wrap: wrap;
 
-        &__title {
-            padding: 6px;
-            flex-grow: 1;
-        }
-
-        &__footer {
-            color: white;
-            font-weight: bold;
-            position: relative;
-            text-align: left;
-            display: flex;
-            margin-top: auto;
-        }
-
-
         &__content {
             &_default {
+                color: white;
                 width: 100%;
                 font-size: 18px;
                 text-align: center;
                 padding-top: 5%;
                 padding-bottom: 5%;
             }
-        }
-
-        &__content-filter-input {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            width: 100%;
-        }
-
-        &__actions {
-            display: flex;
-            flex-direction: row;
-
-            &_interactive {
-                @include box-shadow(3);
-                border-bottom-left-radius: $primary-border-radius;
-            }
-            &_filter {
-                color: white;
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-end;
-
-                & input[type=text] {
-                    background-color: transparent;
-                    color: white;
-                    border: none;
-                    outline: none;
-                }
-            }
-        }
-
-        &__footer-button {
-            margin: 2px 4px 2px 4px;
-            height: 100%;
-            cursor: pointer;
-            outline: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 20px;
         }
     }
 </style>
