@@ -26,10 +26,11 @@
         flex-direction: row;
         display: flex;
         flex-wrap: wrap;
-        padding: 6px;
+        padding: 4px;
     }
 
     .environment-card-content > div {
+        flex-grow: 1;
         margin: 2px;
         @include box-shadow(1);
     }
