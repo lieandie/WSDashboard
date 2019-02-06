@@ -2,21 +2,16 @@
     <div class="environment-card-footer">
         <div class="environment-card-footer__title">{{title}}</div>
         <div class="environment-card-footer__actions">
-            <div class="environment-card-footer__actions_interactive environment-card-footer__actions_favourite">
-                <div class=" environment-card-footer__button environment-card-footer__favourite_button">
-                    <fai icon="star" size="sm"/>
+            <div class="environment-card-footer__actions_filter">
+                <div class="environment-card-footer__filter-input">
+                    <label>
+                        <input v-model="filterExpression" type="text" ref="filterInput" placeholder="Фильтр">
+                    </label>
                 </div>
             </div>
-            <div class="environment-card-footer__actions_interactive environment-card-footer__actions_filter">
-                <div class="environment-card-footer__button environment-card-footer__filter_button"
-                     @click="toggleFilterInput">
-                    <fai icon="filter" size="sm"/>
-                </div>
-                <div :class="{'environment-card-footer__filter-input_disabled': isFilterInputHidden}"
-                     class="environment-card-footer__filter-input">
-                    <label>
-                        <input v-model="filterExpression" type="text" ref="filterInput">
-                    </label>
+            <div class=" environment-card-footer__actions_favourite">
+                <div class=" environment-card-footer__button environment-card-footer__favourite_button">
+                    <fai icon="star" size="sm"/>
                 </div>
             </div>
         </div>
@@ -24,8 +19,6 @@
 </template>
 
 <script>
-    import _ from 'lodash';
-
     export default {
         name: "EnvironmentCardFooter",
         props: {
@@ -85,39 +78,34 @@
             flex-direction: row;
             align-items: center;
             width: 100%;
-
-            &_disabled {
-                width: 0;
-            }
         }
 
         &__actions {
             display: flex;
             flex-direction: row;
-            transition: all 2s;
-
-            &_interactive {
-                border-radius: $header-border-radius;
-            }
 
             &_filter {
                 color: white;
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-end;
+                background-color: rgba(0,0,0,.25);
 
                 & input[type=text] {
+                    padding-left: 4px;
                     background-color: transparent;
                     color: $accent-text-color;
                     border: none;
                     outline: none;
-                    width: 100%;
+                    &::placeholder{
+                       color: rgba(255,255,255, .3);
+                    }
                 }
             }
         }
 
         &__button {
-            margin: 2px 4px 2px 4px;
+            margin: 0 4px 0 4px;
             height: 100%;
             cursor: pointer;
             outline: none;
