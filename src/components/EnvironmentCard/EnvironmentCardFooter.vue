@@ -12,7 +12,8 @@
                      @click="toggleFilterInput">
                     <fai icon="filter" size="sm"/>
                 </div>
-                <div v-show="!isFilterInputHidden" class="environment-card-footer__filter-input">
+                <div :class="{'environment-card-footer__filter-input_disabled': isFilterInputHidden}"
+                     class="environment-card-footer__filter-input">
                     <label>
                         <input v-model="filterExpression" type="text" ref="filterInput">
                     </label>
@@ -23,6 +24,8 @@
 </template>
 
 <script>
+    import _ from 'lodash';
+
     export default {
         name: "EnvironmentCardFooter",
         props: {
@@ -42,6 +45,14 @@
                         this.$refs.filterInput.focus();
                     })
                 }
+            },
+            emitFilterExpressionChangedEvent: function () {
+                this.$emit('filterExpressionChanged', this.filterExpression)
+            }
+        },
+        watch: {
+            filterExpression: function () {
+                this.emitFilterExpressionChangedEvent();
             }
         }
     }
@@ -74,14 +85,19 @@
             flex-direction: row;
             align-items: center;
             width: 100%;
+
+            &_disabled {
+                width: 0;
+            }
         }
 
         &__actions {
             display: flex;
             flex-direction: row;
+            transition: all 2s;
 
             &_interactive {
-                border-radius: $primary-border-radius;
+                border-radius: $header-border-radius;
             }
 
             &_filter {

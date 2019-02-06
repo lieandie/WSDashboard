@@ -19,14 +19,16 @@
     @import "../../styles/variables/border";
 
     .project {
+        color: $utility-text-color;
         text-align: center;
         border: 1.5px solid transparent;
         padding: 4px;
-        border-radius: $primary-border-radius;
+        border-radius: $card-border-radius;
         cursor: pointer;
-        background: $service-offline-color;
+        background: rgba(0, 0, 0, 0.5);
     }
     .project_online{
-        background: $service-online-color;
+        background: rgba(255, 255, 255, 0.5);
+        color: $primary-text-color;
     }
 </style>

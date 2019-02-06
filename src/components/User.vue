@@ -28,7 +28,7 @@
         background: $accent-color;
         color: $accent-text-color;
         padding: 2px 6px;
-        border-top-right-radius: $primary-border-radius;
+        border-top-right-radius: $header-border-radius;
     }
 
     .header__username {

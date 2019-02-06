@@ -72,14 +72,10 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        -webkit-transition: border 0.2s ease; /* Safari */
-        transition: border 0.2s ease;
         background-color: $light-primary-color;
         border-right: 1px $divider-color solid;
 
         &::before {
-            -webkit-transition: box-shadow 0.2s ease; /* Safari */
-            transition: box-shadow 0.2s ease;
             content: "";
             width: 100%;
             height: 100%;
@@ -105,7 +101,7 @@
 
     .router-link-active::before {
         @include box-shadow(3);
-        transition: box-shadow 0.2s ease;
+        transition: box-shadow 0.1s ease-in;
         content: "";
         width: 100%;
         height: 100%;
@@ -116,11 +112,11 @@
     }
 
     .navigation .navigation__button:first-child {
-        border-bottom-left-radius: $primary-border-radius;
+        border-bottom-left-radius: $header-border-radius;
     }
 
     .navigation .navigation__button:last-child {
-        border-bottom-right-radius: $primary-border-radius;
+        border-bottom-right-radius: $header-border-radius;
         border-right: none;
     }
 </style>

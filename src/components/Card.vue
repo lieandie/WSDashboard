@@ -46,7 +46,7 @@
     .card {
         position: relative;
         background-color: $light-primary-color;
-        border-radius: $primary-border-radius;
+        border-radius: $card-border-radius;
         @include box-shadow(1);
         display: flex;
         overflow: hidden;
@@ -57,7 +57,7 @@
 
         &__content {
             &_default {
-                color: white;
+                color: $utility-text-color;
                 width: 100%;
                 font-size: 18px;
                 text-align: center;
